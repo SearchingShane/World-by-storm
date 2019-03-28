@@ -1,0 +1,29 @@
+.logo{
+	float: left;
+}
+
+.nav{
+	background-color: red;
+}
+
+.nav ul{
+	float: right;
+	border-right: 30px;
+
+}
+
+.nav ul li{
+	list-style: none;
+	display: inline;
+	font-weight: bold;
+}
+
+.nav ul li a{
+	text-decoration: none;
+	color: white;
+}
+
+.logo{
+	height: 10%;
+	width: 10%;
+}
