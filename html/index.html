@@ -2,21 +2,64 @@
 <html>
 <head>
 	<title>Index</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
-	<div class="nav">
-		<a href="index.html" ><img src="images/placeholder-red.png" class="logo"></a>
-		<ul class="nav-buttons">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="">Products</a></li>
-			<li><a href="">Services</a></li>
-			<li><a href="">About</a></li>
-			<li><a href="">Contact Us</a></li>
-		</ul>
-	</div>
-</body>
-<footer>
+	<div class="container">	
+		<div class="nav">
+				<a href="index.html" ><img src="images/placeholder-red.png" title="logo to be added" class="logo"></a>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="products.html">Products</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+		</div>
+
+		<div class="slider">
+					<input type="button" onclick="plusDivs(-1)" class="button left" value="Previous image">
+
+					<img src="images/sliders/burgendyslider.jpg" title="Slider1" class="slides">
+					<img src="images/sliders/greenslider.jpg" title="Slider2" class="slides">
+					<img src="images/sliders/blueslider.jpg" title="Slider3" class="slides">
+
+					<input type="button" onclick="plusDivs(1)" class="button right" value="Next image">
+		</div>
+
+	<script>
+					var slideIndex = 1;
+					showDivs(slideIndex);
+
+					function plusDivs(n) {
+					  showDivs(slideIndex += n);
+					}
+
+					function showDivs(n) {
+					  var i;
+					  var x = document.getElementsByClassName("slides");
+					  if (n > x.length) {slideIndex = 1}
+					  if (n < 1) {slideIndex = x.length}
+					  for (i = 0; i < x.length; i++) {
+					    x[i].style.display = "none";  
+					  }
+					  x[slideIndex-1].style.display = "block";  
+					}
+	</script>
 	
-</footer>
+	<footer>
+		<p>
+			<a href=""><img src="images/icons/fbicon.png" title="facebook" class="fbicon"></a>
+			<a href=""><img src="images/icons/igicon.png" title="instagram" class="fbicon"></a>
+			<a href=""><img src="images/icons/twittericon.png" title="twitter" class="fbicon"></a>
+			<a href=""><img src="images/icons/pinicon.png" title="pintrest" class="fbicon"></a>
+		</p>
+	</footer>
+
+	</div>
+
+</body>
+
 </html>
